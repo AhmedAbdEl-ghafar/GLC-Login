@@ -1,0 +1,18 @@
+<div class="container" >
+    <form [formGroup]="loginForm"  #userForm2="ngForm" class="form-horizontal">
+        <div class="form-group">
+            <label for="name2" class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-10">
+              <input [(ngModel)]="name2" #userahmed="ngModel" class="form-control" required minlength="5" name="name2" />
+            </div>
+            <div *ngIf="(userahmed.dirty || userahmed.touched)" class="alert alert-danger">
+                <h4 [hidden]="!userahmed?.errors?.required">name is required</h4> 
+                <h4 [hidden]="!userahmed?.errors?.minlength">name must be more than 5 chars</h4>
+                
+              </div>
+          </div>
+
+
+          
+          </form>
+  </div>
